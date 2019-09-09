@@ -20,7 +20,7 @@ to MongoDB Atlas as well as the serverless platform, MongoDB Stitch.
 ### Required Prerequisites
 To successfully complete this workshop, the following software should be installed:
 
-* [MongoDB Compass](https://www.mongodb.com/download-center/compass) - This is a GUI to MongoDB that will be used to 
+* [MongoDB Compass](https://www.mongodb.com/download-center/compass) -- Versin 1.18- Download links below- This is a GUI to MongoDB that will be used to 
 write queries.
 
 * Access to a MongoDB instance.  You can either download [MongoDB](https://www.mongodb.com/download-center/enterprise)
@@ -84,7 +84,13 @@ click the green button to Create Cluster:
 The cluster should complete provisioning within 5-7 minutes.
 
 #### Install MongoDB Compass if you have not already
-MongoDB Compass is the GUI for MongoDB.  Go to https://www.mongodb.com/download-center/compass to download and
+MongoDB Compass is the GUI for MongoDB.  Obtain version 1.18 of MongoDB Compass using the links below:
+- https://downloads.mongodb.com/compass/mongodb-compass-1.18.0-darwin-x64.dmg
+- https://downloads.mongodb.com/compass/mongodb-compass-1.18.0-win32-x64.zip
+- https://downloads.mongodb.com/compass/mongodb-compass-1.18.0-win32-x64.msi
+
+
+Go to https://www.mongodb.com/download-center/compass to download and
 install Compass for your platform.
 
 #### After your MongoDB Atlas Cluster has been provisioned, setup Connection Security:
@@ -127,7 +133,7 @@ was parsed from file in FHIR format.  The data is in JSON format.
 
 Download the dataset from Github. If you have the wget utility, you can get the dataset as follows:
 
-wget https://raw.githubusercontent.com/blainemincey/mdb-101-healthcare-workshop/master/data/fhirDb-patients.json
+wget https://raw.githubusercontent.com/bigdatakid/mdb-101-healthcare-workshop/master/data/patients.json
 
 Otherwise, just open the link in your browser and once the load completes, save the file (File > Save Page As in Chrome).
 
