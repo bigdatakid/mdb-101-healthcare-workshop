@@ -77,14 +77,15 @@ MongoClient.connect(dbUrl, {useNewUrlParser: true}, function (err, client) {
 
 
     findDocuments(db, function () {
-        client.close();
+        console.log('Document finished');
     })
 
-    /**
+    
     myPipeline(db, function () {
         client.close();
     })
-     */
+   
 
 
 });
+
