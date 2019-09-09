@@ -2,14 +2,17 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 
 // Connection URL
-const dbUrl = 'mongodb+srv://fhir:workshop@fhir-workshop-vautv.mongodb.net/test?retryWrites=true';
+//const dbUrl = 'mongodb+srv://fhir:workshop@fhir-workshop-vautv.mongodb.net/test?retryWrites=true';
+const dbUrl = 'mongodb+srv://mongodba:data1234@atlasworkshop-6xec7.mongodb.net/test?retryWrites=true&w=majority';
 
 // Database Name
-const databaseName = 'fhirDb';
+const databaseName = 'fhirDB';
+// Collection Name
+const collectionName = 'patients';
 
 // find documents
 const findDocuments = function (db, callback) {
-    const collection = db.collection('patients');
+    const collection = db.collection(collectionName);
 
     let query = {patientId: 'a7b1cd7b-8fa2-42ff-a491-9597d02368c7'};
     let projection = {patientId: 1, firstName: 1, lastName: 1, birthDate: 1, _id: 0};

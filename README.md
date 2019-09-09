@@ -202,10 +202,10 @@ Copy the code block and paste in the filter dialog in MongoDB Compass.
 ```
 
 * Query sub-document in array and project matched array element  
-(Display Blood Pressure array element if the Systolic is greater than or = 140)  
+(Display Blood Pressure array element if the Systolic is greater than or = 130)  
 Filter:  
 ```
-{"observations.bloodPressure.display":"Systolic Blood Pressure", "observations.bloodPressure.value":{$gte:140}}
+{"observations.bloodPressure.display":"Systolic Blood Pressure", "observations.bloodPressure.value":{$gte:130}}
 ```  
 Click Options and then in the Projection block:  
 ```
