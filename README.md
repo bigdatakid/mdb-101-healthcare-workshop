@@ -802,6 +802,10 @@ URL as indicated below:
 
 ![](images/copywebhookurl.jpg)  
 
+Then we need to deploy our changes in order to test them
+
+![](images/stitch-deploy.jpg)  
+
 Also, notice that directly where we have our Webhook URL, there is an example of 
 using the cURL command.  If you have cURL installed, simply copy this URL and run
 your test being sure to pass your query argument.  Here is a complete example:  
