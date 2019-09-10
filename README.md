@@ -137,17 +137,17 @@ wget https://raw.githubusercontent.com/bigdatakid/mdb-101-healthcare-workshop/ma
 
 Otherwise, just open the link in your browser and once the load completes, save the file (File > Save Page As in Chrome).
 
-Or, it is also included as part of this GitHub repo in the data directory as fhirDb-patients.json.
+Or, it is also included as part of this GitHub repo in the data directory as fhirDB-patients.json.
 
 The dataset is around 50 MB in size and contains around 600 patients (alive and deceased).
 
 #### Create a Database and Collection  
-Click the CREATE DATABASE button and create a 'fhirDb' database with a 'patients' collection:
+Click the CREATE DATABASE button and create a 'fhirDB' database with a 'patients' collection:
 
 ![](images/createDatabase.jpg)  
 
 Navigate to the patients collection and select Import Data from the menu.  
-Then BROWSE to the fhirDb-patients.json file you downloaded:  
+Then BROWSE to the fhirDB-patients.json file you downloaded:  
 
 ![](images/importFhir.jpg)  
 
@@ -579,7 +579,7 @@ it has been pasted:
 # Constants
 ####
 MONGODB_URL = 'mongodb+srv://fhir:workshop@fhir-workshop-vautv.mongodb.net/test?retryWrites=true'
-DATABASE = 'fhirDb'
+DATABASE = 'fhirDB'
 COLLECTION = 'patients'
 ```  
 
@@ -771,7 +771,7 @@ exports = function(payload) {
   // Reference our MongoDB Atlas database/collection
   var patientsCollection = context.services
     .get("mongodb-atlas")
-    .db("fhirDb")
+    .db("fhirDB")
     .collection("patients");
   
   // Query for our patientId using the patientId arg.
@@ -839,7 +839,7 @@ to that below.  Click 'Add a Database Trigger'.
 
 Be sure that Database Triggers is selected.  Name the Trigger.  In this example, we name
 our trigger isDeceasedTrigger.  Keep the Enabled and Event Ordering enabled.  Select the
-cluster, the database (fhirDb), and the collection (patients).  Now, click the Update
+cluster, the database (fhirDB), and the collection (patients).  Now, click the Update
 checkbox **and** the Replace checkbox, enable Full Document, and select 'New Function'.  Your page should look like
 that below (other than the Replace option not checked):  
 
@@ -887,7 +887,7 @@ exports = function(changeEvent) {
       // Access the MongoDB Atlas service
       var patientsCollection = context.services
         .get("mongodb-atlas")
-        .db("fhirDb")
+        .db("fhirDB")
         .collection("patients");
         
       patientsCollection.updateOne(query,update,options)
@@ -949,8 +949,8 @@ of choice.
             "mongodb-atlas"
         );
 
-        // Get a reference to the fhirDb database
-        const db = mongodb.db("fhirDb");
+        // Get a reference to the fhirDB database
+        const db = mongodb.db("fhirDB");
 
         // Search by city
         function searchByCity() {
@@ -1056,7 +1056,7 @@ exports = function(arg){
     var cityArgument = BSON.BSONRegExp(arg, 'i') || '';
 
     // Accessing a mongodb service:
-    var patientsCollection = context.services.get("mongodb-atlas").db("fhirDb").collection("patients");
+    var patientsCollection = context.services.get("mongodb-atlas").db("fhirDB").collection("patients");
     
     var query = {city:{"$regex" : cityArgument}};
     var projection = {_id:0, firstName: 1, lastName: 1, gender: 1, maritalStatus: 1, birthDate: 1, city: 1, state: 1 };
