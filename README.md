@@ -807,7 +807,7 @@ using the cURL command.  If you have cURL installed, simply copy this URL and ru
 your test being sure to pass your query argument.  Here is a complete example:  
 
 ```
-curl https://webhooks.mongodb-stitch.com/api/client/v2.0/app/myfhirapp-xmbxe/service/getPatientByPatientId/incoming_webhook/getPatientWebhook?arg=705cc6d2-71a0-4f87-a976-8da866917ddd
+curl https://webhooks.mongodb-stitch.com/api/client/v2.0/app/mystitchapp-snvnk/service/getPatientWebhook/incoming_webhook/getPatientWebhook?arg=705cc6d2-71a0-4f87-a976-8da866917ddd
 ```  
 
 Again, if curl is installed, you should be able to run the command above (being sure to use

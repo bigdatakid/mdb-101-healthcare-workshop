@@ -80,8 +80,9 @@ def aggregation():
 ####
 # Constants
 ####
-MONGODB_URL = 'mongodb+srv://fhir:workshop@fhir-workshop-vautv.mongodb.net/test?retryWrites=true'
-DATABASE = 'fhirDb'
+##MONGODB_URL = 'mongodb+srv://fhir:workshop@fhir-workshop-vautv.mongodb.net/test?retryWrites=true'
+MONGODB_URL = 'mongodb+srv://mongodba:data1234@atlasworkshop-6xec7.mongodb.net/test?retryWrites=true&w=majority'
+DATABASE = 'fhirDB'
 COLLECTION = 'patients'
 
 
@@ -91,7 +92,7 @@ COLLECTION = 'patients'
 if __name__ == '__main__':
     main()
     # Uncomment below to run aggregation
-    # aggregation()
+    aggregation()
 
 ####
 # Indicate End
